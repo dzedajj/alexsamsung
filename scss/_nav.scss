@@ -1,1 +1,31 @@
 @import '_colors.scss';
+
+
+.nav_bg{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.landing .nav_bg img{
+    width: 100px;
+    height: auto;
+}
+
+.navbar-nav{
+    margin-left: auto;
+}
+
+
+#navbuttons a{
+    padding-left: 50px;
+}
+
+#navbuttons a:hover{
+    color: $yellow;
+}
