@@ -1,0 +1,19 @@
+{
+  "name": "alexsamsung",
+  "version": "1.0.1",
+  "description": "Samsung Lab Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzedajj/alexsamsung.git"
+  },
+  "author": "Aleksandra Stankovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzedajj/alexsamsung/issues"
+  },
+  "homepage": "https://github.com/dzedajj/alexsamsung#readme"
+}
