@@ -1,9 +1,41 @@
-body {
-  background-color: red !important;
-  color: aquamarine;
+@import '_colors.scss','_nav.scss';
+
+
+ body{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ /** PRVI DIV ******************************/
+.landing{
+    width: 100%;
+    height: 700px;
+    background: $dark;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, $light, $medium ,$dark );  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, $light, $medium, $dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-.slajder img {
-  height: 100px !important;
-  width: 30% !important;
+.wrappernav{
+    right: 0;
 }
+
+.wrappernav a{
+    padding-left: 50px;
+    color:wheat
+}
+
+.landing .navbar img{
+    width: 100px;
+    height: auto;
+}
+ /** drugi DIV ******************************/
+
+ .proba{
+     background-color: aquamarine;
+     width: 100%;
+     height: 500px;
+ }
+
+ 
