@@ -1,5 +1,14 @@
 @import '_colors.scss', '_nav.scss';
 
+::selection {
+  background: $dark;
+  color: $yellow
+}
+::-moz-selection {
+  background: $dark;
+  color: $yellow
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -50,7 +59,7 @@ body {
 
 .zvezde {
   position: absolute;
-  z-index: 9999;
+  z-index: 2;
   width: 100%;
 }
 
@@ -73,48 +82,6 @@ body {
 
 #cloudMob {
   display: none;
-}
-
-@media only screen and (max-width: 970px) {
-  .clouds {
-    margin-bottom: -30%;
-  }
-
-  #cloud3 {
-    margin-bottom: 30%;
-  }
-}
-
-@media only screen and (max-width: 660px) {
-  .clouds {
-    margin-bottom: -60%;
-  }
-
-  #cloud1,
-  #cloud2,
-  #cloud3 {
-    display: none;
-  }
-
-  #cloudMob {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .clouds {
-    margin-bottom: -100%;
-  }
-
-  .raketa {
-    margin-right: -30%;
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .clouds {
-    margin-bottom: -130%;
-  }
 }
 
 /** Text i raketa **/
@@ -140,8 +107,67 @@ body {
 }
 
 .textidug h1 {
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
+
+@media only screen and (max-width: 970px) {
+  .clouds {
+    margin-bottom: -30%;
+  }
+
+  #cloud3 {
+    margin-bottom: 30%;
+  }
+
+}
+
+@media only screen and (max-width: 660px) {
+  .clouds {
+    margin-bottom: -60%;
+  }
+
+  .textidug h1, p{
+    color: white;
+  }
+
+  .planeta{
+    left: -15% !important;
+  }
+
+  #cloud1,
+  #cloud2,
+  #cloud3 {
+    display: none;
+  }
+
+  #cloudMob {
+    display: block;
+  }
+
+  
+}
+
+@media only screen and (max-width: 500px) {
+  .clouds {
+    margin-bottom: -100%;
+  }
+
+  .raketa img{
+    margin-right: -30%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .clouds {
+    margin-bottom: -130%;
+  }
+
+  .raketa img{
+    margin-right: -30%;
+  }
+}
+
+
 
 /** drugi DIV ******************************/
 
