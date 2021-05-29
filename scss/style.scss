@@ -1,23 +1,34 @@
-@import '_colors.scss','_nav.scss';
+@import '_colors.scss', '_nav.scss';
 
- body{
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
- }
-
-
- /** PRVI DIV ******************************/
-.landing{
-    position: relative;
-    width: 100%;
-    height: 700px;
-    background: $dark;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, $light, $light, $medium ,$dark );  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, $light, $light, $medium,$dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.landing .planeta{
+/** PRVI DIV ******************************/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 150%;
+  background: $dark; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    $light,
+    $light,
+    $medium,
+    $dark
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    $light,
+    $light,
+    $medium,
+    $dark
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.landing .planeta {
   width: 120px;
   height: auto;
   position: absolute;
@@ -25,117 +36,117 @@
   left: 25%;
 }
 
-
-.landing .clouds{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 700px;
+.clouds {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 700px;
 }
 
-.landing .clouds #cloud1{
-    width: 100%;
-    opacity: 0.05;  
+#cloud1 {
+  width: 100%;
+  opacity: 0.05;
 }
 
-.zvezde{
+.zvezde {
   position: absolute;
   z-index: 9999;
   width: 100%;
 }
 
-.landing .clouds #cloud2{
-    left: 0;
-    width: 100%;
-    position: absolute;
-    opacity: 0.03;
-    z-index: 1;   
+#cloud2 {
+  left: 0;
+  width: 100%;
+  position: absolute;
+  opacity: 0.03;
+  z-index: 1;
 }
 
-.landing .clouds #cloud3{
-    left: 0;
-    bottom:0;
-    width: 100%;
-    position: absolute;
-    opacity: 1;
-    z-index: 2;   
+#cloud3 {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+  z-index: 2;
 }
 
-#cloudMob{
-    display:none;
+#cloudMob {
+  display: none;
 }
 
 @media only screen and (max-width: 970px) {
-    .clouds {
-      margin-bottom: -30%;
-    }
+  .clouds {
+    margin-bottom: -30%;
   }
 
-  @media only screen and (max-width: 660px) {
-    .clouds {
-      margin-bottom: -60%;
-    }
-    
-    #cloud1, #cloud2{
-        display:none;
-    }
+  #cloud3 {
+    margin-bottom: 30%;
+  }
+}
 
-    #cloudMob{
-        display: block;
-    }
+@media only screen and (max-width: 660px) {
+  .clouds {
+    margin-bottom: -60%;
   }
 
-  @media only screen and (max-width: 500px) {
-    .clouds {
-      margin-bottom: -100%;
-    }
+  #cloud1,
+  #cloud2,
+  #cloud3 {
+    display: none;
   }
 
-  @media only screen and (max-width: 380px) {
-    .clouds {
-      margin-bottom: -130%;
-    }
+  #cloudMob {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .clouds {
+    margin-bottom: -100%;
   }
 
+  .raketa {
+    margin-right: -30%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .clouds {
+    margin-bottom: -130%;
+  }
+}
 
 /** Text i raketa **/
-.raketa{
-    height: 700px;
-    display: flex ;
-    justify-content: space-between;
-    align-items: flex-end;   
+.raketa {
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.raketa img{
-   height: 600px;
-   z-index: 3;
-   padding: 0;
-   margin: 0;
-   margin-right: 10%;
+.raketa img {
+  height: 600px;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  margin-right: 10%;
 }
 
-.raketa .textidug {
-    position: relative;
-    z-index: 3;
-    padding-bottom: 60px;
+.textidug {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 60px;
 }
 
-.raketa .textidug h1{ 
-    padding-bottom: 80px;
+.textidug h1 {
+  padding-bottom: 80px;
 }
 
+/** drugi DIV ******************************/
 
+.col-12 {
+  background-color: aquamarine;
 
-
-
-
- /** drugi DIV ******************************/
-
-.col-12{
-     background-color: aquamarine;
-     
-     height: 500px;
+  height: 500px;
 }
-
-
- 
