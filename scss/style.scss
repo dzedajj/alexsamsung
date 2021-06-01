@@ -8,7 +8,7 @@ body {
 
 /* Works on Firefox */
 * {
-  scrollbar-color: $yellow $dark
+  scrollbar-color: $yellow $dark;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -26,14 +26,13 @@ body {
   border: 3px solid orange;
 }
 
-
 ::selection {
   background: $dark;
-  color: $yellow
+  color: $yellow;
 }
 ::-moz-selection {
   background: $dark;
-  color: $yellow
+  color: $yellow;
 }
 
 /** HOME DIV ******************************/
@@ -41,16 +40,26 @@ body {
   position: relative;
   width: 100%;
   background: $dark; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,$light, $light,$medium,$dark); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,$light,$light,$medium,$dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(
+    to top,
+    $light,
+    $light,
+    $medium,
+    $dark
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    $light,
+    $light,
+    $medium,
+    $dark
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
 
 .zvezde {
   position: absolute;
   z-index: 2;
   width: 100%;
-  
 }
 
 .planeta {
@@ -96,26 +105,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-}
 
-.raketa img {
-  height: 600px;
-  z-index: 3;
-  padding: 0;
-  margin: 0;
-  margin-right: 10%;
+  img {
+    height: 600px;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    margin-right: 10%;
+  }
 }
 
 .textidug {
   position: relative;
   z-index: 3;
   padding-bottom: 60px;
-}
 
-.textidug h1 {
-  padding-bottom: 20px;
+  h1 {
+    padding-bottom: 20px;
+  }
 }
-
 
 /** Responsive **/
 @media only screen and (max-width: 970px) {
@@ -133,11 +141,12 @@ body {
     margin-bottom: -60%;
   }
 
-  .textidug h1, p{
+  .textidug h1,
+  p {
     color: white;
   }
 
-  .planeta{
+  .planeta {
     left: -15% !important;
   }
 
@@ -157,7 +166,7 @@ body {
     margin-bottom: -100%;
   }
 
-  .raketa img{
+  .raketa img {
     margin-right: -30%;
   }
 }
@@ -167,158 +176,154 @@ body {
     margin-bottom: -130%;
   }
 
-  .raketa img{
+  .raketa img {
     margin-right: -30%;
   }
 }
 
 /** ABOUT DIV ******************************/
 
-#About{
+#About {
   position: relative;
   z-index: 9;
   margin-top: 100px;
 }
 
-.morp-bg{
-  background-image: url("../img/pozadina5.png");
+.morp-bg {
+  background-image: url('../img/pozadina5.png');
   width: 100%;
   height: 600px;
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
   position: relative;
 }
 
-.morp-f{
+.morp-f {
   position: absolute;
-  width:52%;
+  width: 52%;
   height: 400px;
   z-index: 1;
-  right:0;
-  top:100px;
+  right: 0;
+  top: 100px;
   background-color: rgba(255, 255, 255, 0.87);
   backdrop-filter: undefined;
   -webkit-backdrop-filter: undefined;
-  border: 5px; ;
+  border: 5px;
   box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   color: rgb(255, 255, 255);
-}
 
-.morp-f h2{
-  padding: 60px;
-  color: $dark;
-  text-decoration: solid;
-  text-decoration: underline;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
+  h2 {
+    padding: 60px;
+    color: $dark;
+    text-decoration: solid;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
 
-.morp-f p{
-  padding:20px 40px 0 40px;
-  color: $dark;
-  text-align: justify;
-}
+  p {
+    padding: 20px 40px 0 40px;
+    color: $dark;
+    text-align: justify;
+  }
 
-.morp-f h5{
-  font-style: italic;
-  color: $dark;
-  padding: 10px 40px;
-  text-align: right;
+  h5 {
+    font-style: italic;
+    color: $dark;
+    padding: 10px 40px;
+    text-align: right;
+  }
 }
 
 /** GALERY DIV ******************************/
 
-.galery{
+.galery {
   margin-top: 200px;
   height: 600px;
   width: 100%;
 }
 
-.carousel-item img{
+.carousel-item img {
   width: 100%;
   height: 600px;
 }
 
-.carousel{
+.carousel {
   border-radius: 40px;
-  
 }
 
 /** Testemonials DIV ******************************/
 
-.testemonials{
+.testemonials {
   width: 100%;
   margin-top: 200px;
 }
 
-.testem{
-  background-image:url("../img/Saturn.png");
-  background-size:contain;
+.testem {
+  background-image: url('../img/Saturn.png');
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-  
-
 }
-.prvi1, .drugi2{
+.prvi1,
+.drugi2 {
   display: flex;
   margin-top: 50px;
   justify-content: space-between;
-
 }
 
- .prvi, .drugi, .treci, .cetvrti{
-  background-color:rgba(30, 3, 38, 0.8);
+.prvi,
+.drugi,
+.treci,
+.cetvrti {
+  background-color: rgba(30, 3, 38, 0.8);
   backdrop-filter: undefined;
   -webkit-backdrop-filter: undefined;
-  border: 5px; ;
+  border: 5px;
   box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   color: rgb(255, 255, 255);
-  
   height: 250px;
-  width:45%;
+  width: 45%;
   padding: 10px;
- }
+}
 
- .ime{
-   display: flex;
-   align-items: center;
-   margin-bottom: 20px;
- }
- 
- .ime img{
-   height: 60px;
-   padding-right: 20px;
- }
+.ime {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 
- .ocena{
-   background-color:$dark;
-   width: 120px;
-   height: 30px;
-   text-align: center;
-   border-radius: 10px;
-   
- }
+  img {
+    height: 60px;
+    padding-right: 20px;
+  }
+}
+
+.ocena {
+  background-color: $dark;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
 
 /** prices DIV ******************************/
-.price{
+.price {
   margin-top: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 50px;
-  
 }
 
-
-.card-body{
-  background-color:rgba(30, 3, 38, 0.8);
+.card-body {
+  background-color: rgba(30, 3, 38, 0.8);
   backdrop-filter: undefined;
   -webkit-backdrop-filter: undefined;
   box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
@@ -328,8 +333,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-
-.program{
+.program {
   position: absolute;
   display: flex;
   background: $dark;
@@ -339,25 +343,18 @@ body {
   border-radius: 10px;
   height: 80px;
   padding-left: 35px;
+
+  img {
+    width: 60px;
+    height: auto;
+  }
 }
 
-.program img{
-  width: 60px;
-  height: auto;
-}
-
-.ponuda{
+.ponuda {
   margin-top: 30%;
-}
 
-.ponuda h5{
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
-
-.ponuda a{
-  position: absolute;
-  bottom: 30px;
-  width: 90%;
-
+  h5 {
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
 }
