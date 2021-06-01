@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 .transparent {
   background-color: transparent;
 }
@@ -51,6 +52,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Rubik", sans-serif !important;
 }
 
 /* Works on Firefox */
@@ -89,9 +91,7 @@ body {
   width: 100%;
   background: #1e0353;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #680ab6, #680ab6, #44029a, #1e0353);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #680ab6, #680ab6, #44029a, #1e0353);
+  background-image: linear-gradient(to right top, #680ab6, #44029a, #1e0353, #1e0353);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -145,7 +145,6 @@ body {
   justify-content: space-between;
   align-items: flex-end;
 }
-
 .raketa img {
   height: 600px;
   z-index: 3;
@@ -159,9 +158,33 @@ body {
   z-index: 3;
   padding-bottom: 60px;
 }
-
 .textidug h1 {
+  padding-bottom: 5px;
+  color: #1e0353;
+  text-decoration: solid;
+  letter-spacing: 1px;
+}
+.textidug p {
   padding-bottom: 20px;
+  color: #1e0353;
+}
+
+.mainbtn {
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  background: #f2b401;
+  padding: 5px 100px 5px 100px;
+  text-decoration: none;
+  border-style: none;
+}
+
+.mainbtn:hover {
+  background: #1e0353;
+  text-decoration: none;
 }
 
 /** Responsive **/
@@ -179,7 +202,8 @@ body {
     margin-bottom: -60%;
   }
 
-  .textidug h1, p {
+  .textidug h1,
+p {
     color: white;
   }
 
@@ -248,22 +272,17 @@ body {
   -webkit-border-radius: 12px;
   color: white;
 }
-
 .morp-f h2 {
   padding: 60px;
   color: #1e0353;
   text-decoration: solid;
-  text-decoration: underline;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
-
 .morp-f p {
   padding: 20px 40px 0 40px;
   color: #1e0353;
   text-align: justify;
 }
-
 .morp-f h5 {
   font-style: italic;
   color: #1e0353;
@@ -301,13 +320,17 @@ body {
   background-size: 50%;
 }
 
-.prvi1, .drugi2 {
+.prvi1,
+.drugi2 {
   display: flex;
   margin-top: 50px;
   justify-content: space-between;
 }
 
-.prvi, .drugi, .treci, .cetvrti {
+.prvi,
+.drugi,
+.treci,
+.cetvrti {
   background-color: rgba(30, 3, 38, 0.8);
   backdrop-filter: undefined;
   -webkit-backdrop-filter: undefined;
@@ -327,7 +350,6 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .ime img {
   height: 60px;
   padding-right: 20px;
@@ -342,37 +364,56 @@ body {
 }
 
 /** prices DIV ******************************/
+.peti {
+  background: #1e0353;
+  /* fallback for old browsers */
+  background-color: white;
+}
+
 .price {
-  margin-top: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-radius: 50px;
+}
+
+.card {
+  margin-top: 200px;
+  background-color: rgba(242, 180, 1, 0.5) !important;
+  backdrop-filter: undefined !important;
+  -webkit-backdrop-filter: undefined !important;
+  border: 5px !important;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
+  border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
 }
 
 .card-body {
-  background-color: rgba(30, 3, 38, 0.8);
-  backdrop-filter: undefined;
-  -webkit-backdrop-filter: undefined;
-  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
+  color: #1e0353;
+}
+.card-body h2 {
+  width: 95%;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 70px;
   color: white;
 }
 
 .program {
   position: absolute;
   display: flex;
-  background: #1e0353;
+  background: #f2b401;
+  justify-content: space-between;
   align-items: center;
   width: 95%;
   left: -15px;
   border-radius: 10px;
   height: 80px;
   padding-left: 35px;
+  padding-right: 35px;
+  color: white;
 }
-
 .program img {
   width: 60px;
   height: auto;
@@ -381,16 +422,20 @@ body {
 .ponuda {
   margin-top: 30%;
 }
-
 .ponuda h5 {
   padding-bottom: 10px;
   padding-left: 10px;
 }
+.ponuda i {
+  padding-right: 20px;
+}
 
-.ponuda a {
-  position: absolute;
-  bottom: 30px;
-  width: 90%;
+.modal {
+  z-index: 9999;
+}
+
+.modal-backdrop {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

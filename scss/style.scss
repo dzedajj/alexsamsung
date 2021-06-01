@@ -1,9 +1,12 @@
 @import '_colors.scss', '_nav.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Rubik', sans-serif !important;
 }
 
 /* Works on Firefox */
@@ -40,20 +43,7 @@ body {
   position: relative;
   width: 100%;
   background: $dark; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    $light,
-    $light,
-    $medium,
-    $dark
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    $light,
-    $light,
-    $medium,
-    $dark
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to right top, $light,$medium,$dark,$dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .zvezde {
@@ -121,9 +111,36 @@ body {
   padding-bottom: 60px;
 
   h1 {
+    padding-bottom: 5px;
+    color: $dark;
+    text-decoration: solid;
+    
+    letter-spacing: 1px;
+  }
+  p{
     padding-bottom: 20px;
+    color: $dark;
   }
 }
+
+.mainbtn {
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif ;
+  color: #ffffff;
+  background: #f2b401;
+  padding: 5px 100px 5px 100px;
+  text-decoration: none;
+  border-style: none;
+}
+
+.mainbtn:hover {
+  background: #1e0353;
+  text-decoration: none;
+}
+
 
 /** Responsive **/
 @media only screen and (max-width: 970px) {
@@ -219,9 +236,7 @@ body {
     padding: 60px;
     color: $dark;
     text-decoration: solid;
-    text-decoration: underline;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
   }
 
   p {
@@ -314,35 +329,58 @@ body {
 }
 
 /** prices DIV ******************************/
+
+.peti{
+  background: $dark; /* fallback for old browsers */
+background-color: white;
+}
+
 .price {
-  margin-top: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-radius: 50px;
 }
 
+.card{
+  margin-top: 200px;
+  background-color: rgba(242,180, 1, 0.5) !important;
+  backdrop-filter: undefined !important;
+  -webkit-backdrop-filter: undefined !important;
+  border: 5px !important;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
+  border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
+}
 .card-body {
-  background-color: rgba(30, 3, 38, 0.8);
-  backdrop-filter: undefined;
-  -webkit-backdrop-filter: undefined;
-  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  color: rgb(255, 255, 255);
+  
+  color: $dark;
+
+  h2{
+  
+
+    width: 95%;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 70px;
+    color: white;
+  }
 }
 
 .program {
   position: absolute;
   display: flex;
-  background: $dark;
+  background:$yellow;
+  justify-content: space-between;
   align-items: center;
   width: 95%;
   left: -15px;
   border-radius: 10px;
   height: 80px;
   padding-left: 35px;
+  padding-right: 35px ;
+  color: white;
 
   img {
     width: 60px;
@@ -350,11 +388,24 @@ body {
   }
 }
 
-.ponuda {
+.ponuda{
   margin-top: 30%;
 
   h5 {
     padding-bottom: 10px;
     padding-left: 10px;
   }
+
+  i{
+    padding-right: 20px;
+  }
+}
+
+
+.modal{
+  z-index: 9999;
+}
+
+.modal-backdrop{
+  display: none;
 }
