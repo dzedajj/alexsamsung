@@ -45,6 +45,7 @@ body {
   background: linear-gradient(to top,$light,$light,$medium,$dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+
 .zvezde {
   position: absolute;
   z-index: 2;
@@ -243,86 +244,120 @@ body {
 
 .carousel{
   border-radius: 40px;
-  background-color: rebeccapurple;
+  
 }
 
 /** Testemonials DIV ******************************/
 
-// .testemonials{
-//   width: 100%;
-//   height: 600px;
-//   margin-top: 200px;
-//   position: relative;
-// }
-
-// .testemonials img{
-//   width: 600px;
-//   position: absolute;
-//   left: 29%;
-//   top: 8%;
-//   z-index: -1;
-// }
-// #prvi{
-
-// background-color: rgba(89, 89, 89, 0.25);
-// backdrop-filter: undefined;
-// -webkit-backdrop-filter: undefined;
-// border:1 ;
-// box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
-// -webkit-box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
-// border-radius: 12px;
-// -webkit-border-radius: 12px;
-// color: rgb(128, 128, 128);
-//   height: 300px;
-// }
-
-// #drugi{
-//   background-color: royalblue;
-//   height: 300px;
-// }
-
-// #treci{
-//   background-color: seagreen;
-//   height: 300px;
-// }
-
-// #cetvrti{
-//   background-color: pink;
-//   height: 300px;
-// }
-
-
 .testemonials{
   width: 100%;
-  background-color: yellow;
-  height: 600px;
   margin-top: 200px;
 }
+
 .testem{
+  background-image:url("../img/Saturn.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  
+
+}
+.prvi1, .drugi2{
   display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+
+}
+
+ .prvi, .drugi, .treci, .cetvrti{
+  background-color:rgba(30, 3, 38, 0.8);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px; ;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  color: rgb(255, 255, 255);
+  
+  height: 250px;
+  width:45%;
+  padding: 10px;
+ }
+
+ .ime{
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+ }
+ 
+ .ime img{
+   height: 60px;
+   padding-right: 20px;
+ }
+
+ .ocena{
+   background-color:$dark;
+   width: 120px;
+   height: 30px;
+   text-align: center;
+   border-radius: 10px;
+   
+ }
+
+/** prices DIV ******************************/
+.price{
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 50px;
   
 }
 
 
-
- .prvi{
-   background-color: red;
-   height: 200px;
-   width:500px;
-
- }
- .drugi{
-  background-color: green;
-  height: 200px;
-   width:500px;
+.card-body{
+  background-color:rgba(30, 3, 38, 0.8);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  color: rgb(255, 255, 255);
 }
-.treci{
-  background-color: blue;
-  height: 200px;
-   width:500px;
+
+
+.program{
+  position: absolute;
+  display: flex;
+  background: $dark;
+  align-items: center;
+  width: 95%;
+  left: -15px;
+  border-radius: 10px;
+  height: 80px;
+  padding-left: 35px;
 }
-.cetvrti{
-  background-color: violet;
-  height: 200px;
-  width:500px;
+
+.program img{
+  width: 60px;
+  height: auto;
+}
+
+.ponuda{
+  margin-top: 30%;
+}
+
+.ponuda h5{
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.ponuda a{
+  position: absolute;
+  bottom: 30px;
+  width: 90%;
+
 }

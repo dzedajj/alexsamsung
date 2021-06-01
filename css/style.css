@@ -33,6 +33,20 @@
   color: #f2b401;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-brand span {
+  font-size: 20px;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -271,43 +285,112 @@ body {
 
 .carousel {
   border-radius: 40px;
-  background-color: rebeccapurple;
 }
 
 /** Testemonials DIV ******************************/
 .testemonials {
   width: 100%;
-  background-color: yellow;
-  height: 600px;
   margin-top: 200px;
 }
 
 .testem {
+  background-image: url("../img/Saturn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.prvi1, .drugi2 {
   display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
 }
 
-.prvi {
-  background-color: red;
-  height: 200px;
-  width: 500px;
+.prvi, .drugi, .treci, .cetvrti {
+  background-color: rgba(30, 3, 38, 0.8);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  color: white;
+  height: 250px;
+  width: 45%;
+  padding: 10px;
 }
 
-.drugi {
-  background-color: green;
-  height: 200px;
-  width: 500px;
+.ime {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.treci {
-  background-color: blue;
-  height: 200px;
-  width: 500px;
+.ime img {
+  height: 60px;
+  padding-right: 20px;
 }
 
-.cetvrti {
-  background-color: violet;
-  height: 200px;
-  width: 500px;
+.ocena {
+  background-color: #1e0353;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/** prices DIV ******************************/
+.price {
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 50px;
+}
+
+.card-body {
+  background-color: rgba(30, 3, 38, 0.8);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  color: white;
+}
+
+.program {
+  position: absolute;
+  display: flex;
+  background: #1e0353;
+  align-items: center;
+  width: 95%;
+  left: -15px;
+  border-radius: 10px;
+  height: 80px;
+  padding-left: 35px;
+}
+
+.program img {
+  width: 60px;
+  height: auto;
+}
+
+.ponuda {
+  margin-top: 30%;
+}
+
+.ponuda h5 {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.ponuda a {
+  position: absolute;
+  bottom: 30px;
+  width: 90%;
 }
 
 /*# sourceMappingURL=style.css.map */

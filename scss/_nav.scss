@@ -35,3 +35,17 @@
 #navbuttons a:hover{
     color: $yellow;
 }
+
+.navbar-brand{
+display: flex;
+align-items: center;
+}
+
+.navbar-brand img{
+    height: 60px;
+    width: auto;
+}
+  
+.navbar-brand span{
+    font-size:20px ;
+}
