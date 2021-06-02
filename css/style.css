@@ -1,3 +1,5 @@
+/* za timeline */
+/* za timeline */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 .transparent {
   background-color: transparent;
@@ -48,11 +50,75 @@
   font-size: 20px;
 }
 
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked + section {
+  display: block;
+}
+
+.kontejner {
+  position: relative;
+  width: 80%;
+  height: 450px;
+  margin: 100px auto;
+}
+
+.kontejner i {
+  color: yellow;
+}
+
+.kontejner section {
+  display: none;
+  height: 100%;
+  padding: 15px;
+  background: #449df5;
+  color: #fff;
+  text-align: center;
+}
+
+.kontejner section h1 {
+  margin-bottom: 0;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+.kontejner section p {
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.kontejner section label {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.5em;
+  bottom: 0;
+}
+
+.kontejner section label:nth-child(odd) {
+  right: 120px;
+}
+
+.kontejner section label:nth-child(even) {
+  left: 120px;
+}
+
+.kontejner section > i {
+  font-size: 6em !important;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif !important;
+  width: 100%;
+  height: 100%;
 }
 
 /* Works on Firefox */
@@ -290,79 +356,130 @@ p {
   text-align: right;
 }
 
-/** GALERY DIV ******************************/
-.galery {
-  margin-top: 200px;
-  height: 600px;
-  width: 100%;
+/** TIME LINE DIV 3 ******************************/
+.timeline {
+  color: #fff;
 }
-
-.carousel-item img {
-  width: 100%;
-  height: 600px;
+.timeline h1,
+.timeline ul li .content h2 {
+  text-shadow: 1px 1px 1px rgba(56, 56, 56, 0.5);
 }
-
-.carousel {
-  border-radius: 40px;
-}
-
-/** Testemonials DIV ******************************/
-.testemonials {
-  width: 100%;
-  margin-top: 200px;
-}
-
-.testem {
-  background-image: url("../img/Saturn.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
-}
-
-.prvi1,
-.drugi2 {
-  display: flex;
-  margin-top: 50px;
-  justify-content: space-between;
-}
-
-.prvi,
-.drugi,
-.treci,
-.cetvrti {
-  background-color: rgba(30, 3, 38, 0.8);
-  backdrop-filter: undefined;
-  -webkit-backdrop-filter: undefined;
-  border: 5px;
-  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  color: white;
-  height: 250px;
-  width: 45%;
-  padding: 10px;
-}
-
-.ime {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.ime img {
-  height: 60px;
-  padding-right: 20px;
-}
-
-.ocena {
-  background-color: #1e0353;
-  width: 120px;
-  height: 30px;
+.timeline h1 {
+  background: #3d9e67;
+  padding: 70px 0;
+  font-size: 2.5em;
   text-align: center;
-  border-radius: 10px;
+}
+.timeline ul {
+  background: #faf8eb;
+  padding: 50px 0;
+}
+.timeline ul li {
+  background: #67CC8E;
+  position: relative;
+  margin: 0 auto;
+  width: 5px;
+  padding-bottom: 40px;
+  list-style-type: none;
+}
+.timeline ul li:last-child {
+  padding-bottom: 7px;
+}
+.timeline ul li:before {
+  content: "";
+  background: #faf8eb;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid #67CC8E;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.timeline ul li .hidden {
+  opacity: 0;
+}
+.timeline ul li .content {
+  background: #67CC8E;
+  position: relative;
+  top: 7px;
+  width: 450px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.timeline ul li .content h2 {
+  color: #fff;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.timeline ul li .content p {
+  text-align: center;
+}
+.timeline ul li .content:before {
+  content: "";
+  background: #67CC8E;
+  position: absolute;
+  top: 0px;
+  width: 70px;
+  height: 5px;
+}
+.timeline ul li:nth-child(odd) .content {
+  left: 50px;
+  background: #67CC8E;
+  background: -webkit-linear-gradient(-45deg, #56BC83, #67CC8E);
+  background: linear-gradient(-45deg, #56BC83, #67CC8E);
+}
+.timeline ul li:nth-child(odd) .content:before {
+  left: -38px;
+}
+.timeline ul li:nth-child(even) .content {
+  left: calc(-450px - 45px);
+  background: #67CC8E;
+  background: -webkit-linear-gradient(45deg, #56BC83, #67CC8E);
+  background: linear-gradient(45deg, #56BC83, #67CC8E);
+}
+.timeline ul li:nth-child(even) .content:before {
+  right: -38px;
 }
 
+/* -------------------------
+   ----- Media Queries ----- 
+   ------------------------- */
+@media screen and (max-width: 1020px) {
+  .timeline ul li .content {
+    width: 41vw;
+  }
+
+  .timeline ul li:nth-child(even) .content {
+    left: calc(-41vw - 45px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li .content {
+    width: calc(100vw - 100px);
+  }
+  .timeline ul li .content h2 {
+    text-align: initial;
+  }
+  .timeline ul li:nth-child(even) .content {
+    left: 45px;
+    background: #67CC8E;
+    background: -webkit-linear-gradient(-45deg, #56BC83, #67CC8E);
+    background: linear-gradient(-45deg, #56BC83, #67CC8E);
+  }
+  .timeline ul li:nth-child(even) .content:before {
+    left: -33px;
+  }
+}
+/** Testemonials DIV 4  ******************************/
+/**** u _slider.scss **/
 /** prices DIV ******************************/
 .peti {
   background: #1e0353;
@@ -377,7 +494,7 @@ p {
 }
 
 .card {
-  margin-top: 200px;
+  margin-top: 20px;
   background-color: rgba(242, 180, 1, 0.5) !important;
   backdrop-filter: undefined !important;
   -webkit-backdrop-filter: undefined !important;
@@ -428,14 +545,6 @@ p {
 }
 .ponuda i {
   padding-right: 20px;
-}
-
-.modal {
-  z-index: 9999;
-}
-
-.modal-backdrop {
-  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
