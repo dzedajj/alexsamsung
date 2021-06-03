@@ -50,6 +50,7 @@
   font-size: 20px;
 }
 
+/* za timeline */
 input[type=radio] {
   display: none;
 }
@@ -60,42 +61,55 @@ input[type=radio]:checked + section {
 
 .kontejner {
   position: relative;
-  width: 80%;
+  width: 60%;
   height: 450px;
-  margin: 100px auto;
 }
 
 .kontejner i {
-  color: yellow;
+  color: white;
 }
 
 .kontejner section {
   display: none;
   height: 100%;
-  padding: 15px;
-  background: #449df5;
-  color: #fff;
+  color: white;
   text-align: center;
+  background-color: rgba(242, 180, 1, 0.87);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
 }
-
 .kontejner section h1 {
   margin-bottom: 0;
   font-weight: lighter;
   font-size: 2em;
 }
-
 .kontejner section p {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   padding: 10px;
+  text-align: center;
 }
-
 .kontejner section label {
   position: absolute;
   display: inline-block;
   cursor: pointer;
   font-size: 1.5em;
   bottom: 0;
+}
+.kontejner section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+.kontejner section #rangstar {
+  margin-top: 30px;
 }
 
 .kontejner section label:nth-child(odd) {
@@ -357,25 +371,21 @@ p {
 }
 
 /** TIME LINE DIV 3 ******************************/
+.Ourjourney {
+  margin-top: 100px;
+  background-image: url("../img/timelinezvede.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .timeline {
-  color: #fff;
-}
-.timeline h1,
-.timeline ul li .content h2 {
-  text-shadow: 1px 1px 1px rgba(56, 56, 56, 0.5);
-}
-.timeline h1 {
-  background: #3d9e67;
-  padding: 70px 0;
-  font-size: 2.5em;
-  text-align: center;
+  color: white;
 }
 .timeline ul {
-  background: #faf8eb;
   padding: 50px 0;
 }
 .timeline ul li {
-  background: #67CC8E;
+  background: #1e0353;
   position: relative;
   margin: 0 auto;
   width: 5px;
@@ -387,7 +397,7 @@ p {
 }
 .timeline ul li:before {
   content: "";
-  background: #faf8eb;
+  background: white;
   position: absolute;
   left: 50%;
   top: 0;
@@ -395,24 +405,35 @@ p {
   -webkit-transform: translateX(-50%);
   width: 20px;
   height: 20px;
-  border: 3px solid #67CC8E;
+  border: 3px solid #1e0353;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-.timeline ul li .hidden {
-  opacity: 0;
-}
 .timeline ul li .content {
-  background: #67CC8E;
+  background: #1e0353;
   position: relative;
   top: 7px;
   width: 450px;
   padding: 20px;
-  border-radius: 20px;
+}
+.timeline ul li .content #ljubicastaplaneta {
+  width: 150px;
+  position: absolute;
+  z-index: -1;
+  right: -60px;
+  bottom: -60px;
+}
+.timeline ul li .content #moon {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  left: -30px;
 }
 .timeline ul li .content h2 {
-  color: #fff;
+  color: #f2b401;
   padding-bottom: 10px;
   text-align: center;
 }
@@ -421,28 +442,40 @@ p {
 }
 .timeline ul li .content:before {
   content: "";
-  background: #67CC8E;
+  background: #1e0353;
   position: absolute;
   top: 0px;
   width: 70px;
   height: 5px;
 }
-.timeline ul li:nth-child(odd) .content {
-  left: 50px;
-  background: #67CC8E;
-  background: -webkit-linear-gradient(-45deg, #56BC83, #67CC8E);
-  background: linear-gradient(-45deg, #56BC83, #67CC8E);
-}
-.timeline ul li:nth-child(odd) .content:before {
-  left: -38px;
-}
 .timeline ul li:nth-child(even) .content {
-  left: calc(-450px - 45px);
-  background: #67CC8E;
-  background: -webkit-linear-gradient(45deg, #56BC83, #67CC8E);
-  background: linear-gradient(45deg, #56BC83, #67CC8E);
+  left: 50px;
+  background-color: rgba(30, 3, 83, 0.7);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  color: white;
 }
 .timeline ul li:nth-child(even) .content:before {
+  left: -38px;
+}
+.timeline ul li:nth-child(odd) .content {
+  left: calc(-450px - 45px);
+  background-color: rgba(30, 3, 83, 0.7);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  color: white;
+}
+.timeline ul li:nth-child(odd) .content:before {
   right: -38px;
 }
 
@@ -454,7 +487,7 @@ p {
     width: 41vw;
   }
 
-  .timeline ul li:nth-child(even) .content {
+  .timeline ul li:nth-child(odd) .content {
     left: calc(-41vw - 45px);
   }
 }
@@ -468,20 +501,66 @@ p {
   .timeline ul li .content h2 {
     text-align: initial;
   }
-  .timeline ul li:nth-child(even) .content {
+  .timeline ul li:nth-child(odd) .content {
     left: 45px;
-    background: #67CC8E;
-    background: -webkit-linear-gradient(-45deg, #56BC83, #67CC8E);
-    background: linear-gradient(-45deg, #56BC83, #67CC8E);
+    background-color: rgba(30, 3, 83, 0.8);
+    backdrop-filter: undefined;
+    -webkit-backdrop-filter: undefined;
+    border: 5px;
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    color: white;
   }
-  .timeline ul li:nth-child(even) .content:before {
+  .timeline ul li:nth-child(odd) .content:before {
     left: -33px;
   }
 }
 /** Testemonials DIV 4  ******************************/
 /**** u _slider.scss **/
+.testi {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.testiN {
+  width: 45%;
+  height: 300px;
+  padding: 50px;
+  color: #1e0353;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.testiN p {
+  color: #1e0353;
+  padding-top: 60px;
+}
+
+#testplaneta {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: -60px;
+  top: -10px;
+  z-index: -1;
+}
+
 /** prices DIV ******************************/
 .peti {
+  margin-top: 200px;
   background: #1e0353;
   /* fallback for old browsers */
   background-color: white;
@@ -493,58 +572,43 @@ p {
   justify-content: space-between;
 }
 
-.card {
-  margin-top: 20px;
-  background-color: rgba(242, 180, 1, 0.5) !important;
-  backdrop-filter: undefined !important;
-  -webkit-backdrop-filter: undefined !important;
-  border: 5px !important;
-  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
-  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
-  border-radius: 12px !important;
-  -webkit-border-radius: 12px !important;
-}
-
 .card-body {
-  color: #1e0353;
+  background-color: rgba(30, 3, 83, 0.7);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  color: white;
+  color: #f2b401;
+  text-align: center;
 }
 .card-body h2 {
-  width: 95%;
+  margin-top: 80px;
+}
+.card-body p, .card-body h1 {
+  color: white;
+  margin-left: 10px;
+}
+.card-body button {
+  margin-top: 20px;
+  background-color: white;
   height: 50px;
-  border-radius: 10px;
-  text-align: center;
-  margin-top: 70px;
-  color: white;
+  width: 100%;
+  border-radius: 20px;
+  color: #1e0353;
 }
 
-.program {
+#price2 {
+  opacity: 1;
+  width: 140px;
   position: absolute;
-  display: flex;
-  background: #f2b401;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-  left: -15px;
-  border-radius: 10px;
-  height: 80px;
-  padding-left: 35px;
-  padding-right: 35px;
-  color: white;
-}
-.program img {
-  width: 60px;
-  height: auto;
+  top: -60px;
+  left: 33%;
 }
 
-.ponuda {
-  margin-top: 30%;
-}
-.ponuda h5 {
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
-.ponuda i {
-  padding-right: 20px;
-}
+/****** CONTACT DIV 6 **********/
 
 /*# sourceMappingURL=style.css.map */

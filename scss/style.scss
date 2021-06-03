@@ -253,30 +253,25 @@ body {
     padding: 10px 40px;
     text-align: right;
   }
-}
+} 
 
 /** TIME LINE DIV 3 ******************************/
+.Ourjourney{
+  margin-top: 100px;
+  background-image: url("../img/timelinezvede.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .timeline{
-  color: $text-color;
-  
-  h1,
-  ul li .content h2{
-    text-shadow: 1px 1px 1px rgba(56, 56, 56, 0.5);
-  }
-  
-  h1{
-    background: $title-background;
-    padding: 70px 0;
-    font-size: 2.5em;
-    text-align: center;
-  }
+  color: white;
   
   ul{
-    background: $background-color;
     padding: 50px 0;
     
     li{
-      background: $content-background-color;
+      background: $dark;
       position: relative;
       margin: 0 auto;
       width: 5px;
@@ -289,7 +284,7 @@ body {
       
       &:before{
         content: '';
-        background: $background-color;
+        background: white;
         position: absolute;
         left: 50%;
         top: 0;
@@ -297,26 +292,41 @@ body {
         -webkit-transform: translateX(-50%);
         width: 20px;
         height: 20px;
-        border: 3px solid $content-background-color;
+        border: 3px solid $dark;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
       }
       
-      .hidden {
-        opacity: 0;
-      }
-      
       .content{
-        background: $content-background-color; 
+        background: $dark; 
         position: relative;
         top: 7px;
         width: $content-width;
         padding: 20px;
-        border-radius: 20px;
+        
+        #ljubicastaplaneta{
+          width: 150px;
+          position: absolute;
+          z-index: -1;
+          right: -60px;
+          bottom: -60px;
+          
+        }
+
+        #moon{
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          z-index: -1;
+          top: -100px;
+          left: -30px;
+          
+          
+        }
         
         h2{
-          color: $time-color;
+          color: $yellow;
           padding-bottom: 10px;
           text-align: center;
         }
@@ -327,7 +337,7 @@ body {
         
         &:before{
           content: '';
-          background: $content-background-color;
+          background: $dark;
           position: absolute;
           top: 0px;
           width: 70px;
@@ -335,25 +345,37 @@ body {
         }
       }
       
-      &:nth-child(odd) .content {
-        left: 50px;
-        background: $content-background-color;
-        background: -webkit-linear-gradient(-45deg, $content-background-gradient , $content-background-color);
-        background: linear-gradient(-45deg,  $content-background-gradient , $content-background-color);
-      }
-      
-      &:nth-child(odd) .content:before {
-        left: -38px;
-      }
-      
       &:nth-child(even) .content {
-        left: calc(-#{$content-width} - 45px);
-        background: $content-background-color;
-        background: -webkit-linear-gradient(45deg, $content-background-gradient , $content-background-color);
-        background: linear-gradient(45deg,  $content-background-gradient , $content-background-color);
+        left: 50px;
+        background-color: rgba(30, 3, 83, 0.7);
+        backdrop-filter: undefined;
+        -webkit-backdrop-filter: undefined;
+        border: 5px;
+        box-shadow: rgba(142, 142, 142, 0.19) 0px 6px       15px 0px;
+        -webkit-box-shadow: rgba(142, 142, 142, 0.19)       0px 6px 15px 0px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        color: rgb(255, 255, 255);
       }
       
       &:nth-child(even) .content:before {
+        left: -38px;
+      }
+      
+      &:nth-child(odd) .content {
+        left: calc(-#{$content-width} - 45px);
+        background-color: rgba(30, 3, 83, 0.7);
+        backdrop-filter: undefined;
+        -webkit-backdrop-filter: undefined;
+        border: 5px;
+        box-shadow: rgba(142, 142, 142, 0.19) 0px 6px       15px 0px;
+        -webkit-box-shadow: rgba(142, 142, 142, 0.19)       0px 6px 15px 0px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        color: rgb(255, 255, 255);
+      }
+      
+      &:nth-child(odd) .content:before {
         right: -38px;
       }
     }
@@ -368,7 +390,7 @@ body {
     .timeline ul li .content {
       width: 41vw;
     }
-    .timeline ul li:nth-child(even) .content {
+    .timeline ul li:nth-child(odd) .content {
       left: calc(-41vw - 45px);
     }
   }
@@ -385,14 +407,20 @@ body {
         }
       }
       
-      &:nth-child(even) .content {
+      &:nth-child(odd) .content {
         left: 45px;
-        background: $content-background-color;
-        background: -webkit-linear-gradient(-45deg, $content-background-gradient , $content-background-color);
-        background: linear-gradient(-45deg,  $content-background-gradient , $content-background-color);
+        background-color: rgba(30, 3, 83, 0.8);
+        backdrop-filter: undefined;
+        -webkit-backdrop-filter: undefined;
+        border: 5px;
+        box-shadow: rgba(142, 142, 142, 0.19) 0px 6px       15px 0px;
+        -webkit-box-shadow: rgba(142, 142, 142, 0.19)       0px 6px 15px 0px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        color: rgb(255, 255, 255);
       }
       
-      &:nth-child(even) .content:before {
+      &:nth-child(odd) .content:before {
         left: -33px;
       }
     }
@@ -403,12 +431,63 @@ body {
 
 /**** u _slider.scss **/
 
+.testi{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+
+.testiN{
+  width: 45%;
+  height: 300px;
+  padding:50px;
+  color: $dark;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  p{
+    color: $dark;
+    padding-top: 60px;
+  }
+
+ 
+}
+
+#testplaneta{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: -60px;
+    top: -10px;
+    z-index: -1;
+  
+}
+
+
+
+
+
+
+
 
 /** prices DIV ******************************/
 
 .peti{
+  margin-top:200px;
   background: $dark; /* fallback for old browsers */
-background-color: white;
+  background-color: white;
 }
 
 .price {
@@ -417,64 +496,48 @@ background-color: white;
   justify-content: space-between;
 }
 
-.card{
-  margin-top: 20px;
-  background-color: rgba(242,180, 1, 0.5) !important;
-  backdrop-filter: undefined !important;
-  -webkit-backdrop-filter: undefined !important;
-  border: 5px !important;
-  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
-  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px !important;
-  border-radius: 12px !important;
-  -webkit-border-radius: 12px !important;
-}
+
 .card-body {
+  background-color: rgba(30, 3, 83, 0.7);
+        backdrop-filter: undefined;
+        -webkit-backdrop-filter: undefined;
+        border: 5px;
+        box-shadow: rgba(142, 142, 142, 0.19) 0px 6px       15px 0px;
+        -webkit-box-shadow: rgba(142, 142, 142, 0.19)       0px 6px 15px 0px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        color: rgb(255, 255, 255);
+  color: $yellow;
+  text-align: center;
   
-  color: $dark;
 
   h2{
+    margin-top: 80px;
+  }
   
-
-    width: 95%;
-    height: 50px;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 70px;
+  p, h1{
+    
     color: white;
+    margin-left: 10px;
+    
+  }
+
+  button{
+    margin-top: 20px;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    border-radius: 20px;
+    color: $dark;
   }
 }
 
-.program {
+#price2{
+  opacity: 1;
+  width: 140px;
   position: absolute;
-  display: flex;
-  background:$yellow;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-  left: -15px;
-  border-radius: 10px;
-  height: 80px;
-  padding-left: 35px;
-  padding-right: 35px ;
-  color: white;
-
-  img {
-    width: 60px;
-    height: auto;
-  }
-}
-
-.ponuda{
-  margin-top: 30%;
-
-  h5 {
-    padding-bottom: 10px;
-    padding-left: 10px;
-  }
-
-  i{
-    padding-right: 20px;
-  }
+  top: -60px;
+  left: 33%;
 }
 
 
@@ -482,6 +545,7 @@ background-color: white;
 
 
 
+/****** CONTACT DIV 6 **********/
 
 
 
