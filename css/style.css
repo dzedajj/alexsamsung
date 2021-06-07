@@ -133,6 +133,7 @@ body {
   font-family: "Rubik", sans-serif !important;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Works on Firefox */
@@ -265,6 +266,7 @@ body {
 }
 
 .toTheTop {
+  display: none;
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -516,7 +518,8 @@ body {
 .card-body h2 {
   margin-top: 80px;
 }
-.card-body p, .card-body h1 {
+.card-body p,
+.card-body h1 {
   color: white;
   margin-left: 10px;
 }
@@ -720,7 +723,8 @@ body {
 }
 @media only screen and (max-width: 500px) {
   /* Landing */
-  #cloud1, #cloud2 {
+  #cloud1,
+#cloud2 {
     display: none;
   }
 
