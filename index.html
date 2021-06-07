@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galactic Travel</title>
 
+    <!-- FAVICON -->
+    
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
     <!-- CDN i linkovanje -->
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="node_modules/animate.css/animate.css" />
 
@@ -37,13 +45,13 @@
   </head>
 
   <body>
-    <!-- LANDING DIV -------------------------------------------------->
+    <!-- DIV 1 - HOME -------------------------------------------------->
     <div class="landing" id="Home">
       <!-- navbar -->
       <div class="nav_bg">
         <nav class="navbar navbar-expand-lg navbar-dark container">
           <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="" />
+            <img  draggable="false" src="img/logo.png" alt="logo" />
             <span>Galactic Travel</span>
           </a>
 
@@ -54,19 +62,18 @@
             data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbuttons">
               <a class="nav-link active" href="#Home">Home </a>
-              <a class="nav-link active" href="#Our mission">Our mission</a>
-              <a class="nav-link active" href="#">Our journey</a>
-              <a class="nav-link active" href="#">Clients</a>
-              <a class="nav-link active" href="#">Price</a>
-              <a class="nav-link active" href="#">Contact us</a>
+              <a class="nav-link active" href="#OurMission">Our mission</a>
+              <a class="nav-link active" href="#OurJourney">Our journey</a>
+              <a class="nav-link active" href="#Clients">Clients</a>
+              <a class="nav-link active" href="#Paketi">Price</a>
+              <a class="nav-link active" href="#Contact">Contact us</a>
             </div>
           </div>
         </nav>
@@ -74,7 +81,7 @@
       <!-- end navbar -->
 
       <!-- stars -->
-      <img src="img/zvezda.png" alt="" class="zvezde" />
+      <img  draggable="false" src="img/zvezda.png" alt="zvezda" class="zvezde" />
 
       <!-- text and rocket -->
       <div class="raketa container">
@@ -85,19 +92,19 @@
             is now possible, would you be excited? If the answer is YES, welcome
             aboard!
           </p>
-          <button class="mainbtn">Apply now</button>
+          <button data-toggle="modal" data-target="#modalLoginForm" class="mainbtn">Apply now</button>
         </div>
-        <img src="img/only rocket.png" alt="" />
+        <img draggable="false"  src="img/rocket.png" alt="" />
       </div>
 
       <!-- planet -->
-      <img class="planeta" src="img/planeta.png" alt="" />
+      <img  draggable="false" class="planeta" src="img/planeta.png" alt="" />
 
       <!-- clouds  -->
       <div class="clouds">
-        <img src="img/oblak1.png" id="cloud1" alt="oblak1" />
-        <img src="img/oblak2.png" id="cloud2" alt="oblak2" />
-        <img src="img/beliblak.png" id="cloud3" alt="oblak3" />
+        <img  draggable="false" src="img/oblak1.png" id="cloud1" alt="oblak1" />
+        <img draggable="false"  src="img/oblak2.png" id="cloud2" alt="oblak2" />
+        <img draggable="false"  src="img/beliblak.png" id="cloud3" alt="oblak3" />
       </div>
 
       <div class="toTheTop">
@@ -105,11 +112,92 @@
           ><i class="fas fa-sort-up"></i>
         </a>
       </div>
+
+
+
+      <!-- Modal ------>
+      <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          
+          <form>
+          <div class="form-row">
+            <div class="col-xl-12 mb-3">
+              <label for="validationDefault01">First name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationDefault01"
+                placeholder="Enter your first name"
+                required
+              />
+            </div>
+
+            <div class="col-xl-12 mb-3">
+              <label for="validationDefault02">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationDefault02"
+                placeholder="Enter your last name"
+                required
+              />
+            </div>
+
+            <div class="col-xl-12 mb-3">
+              <label for="validationDefault03">E-mail address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationDefault03"
+                placeholder="Enter your e-mail address"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Choose a tour</label>
+              <select  class="form-control " id="exampleFormControlSelect1" >
+                <option value="" disabled selected>▼ Click to select</option>
+                <option value="Standard">● Standard</option>
+                <option value="Professional">● Professional</option>
+                <option value="Premium">● Premium</option>
+              </select>
+              
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck2"
+                  required
+                />
+                <label class="form-check-label" for="invalidCheck2">
+                  Agree to terms and conditions
+                </label>
+              </div>
+            </div>
+            <div class="dugmici">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            <button type="button" class="close izlaz" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
     </div>
 
-    <!-- OUR MISSION DIV 2-------------------------------------->
+    <!-- DIV 2 - OUR MISSION -------------------------------------->
 
-    <div class="container" id="About">
+    <div class="container" id="OurMission">
       <div class="row">
         <div class="morp-bg col-12">
           <div class="morp-f">
@@ -128,30 +216,28 @@
       </div>
     </div>
 
-    <!-- TIME LINE DIV 3 -------------------------------------->
-    <div class="Ourjourney">
+    <!-- DIV 3 - OUR JOURNEY -------------------------------------->
+    <div class="Ourjourney" id="OurJourney">
       <div class="container">
         <section class="timeline">
           <ul>
             <li>
               <div class="content">
                 <h2>Our journey</h2>
+                <p>Take a closer look into our journey...</p>
               </div>
             </li>
             <li>
               <div class="content">
                 <h2>
-                  <time>An idea worth of risk</time>
+                  <time>An idea worth the risk</time>
                 </h2>
                 <p>
-                  We dared to take our imagination a step further, beyond our
-                  planet, and we dedicated ourselves to developing the idea.
+                  ... We dared to take our imagination a step further, beyond our
+                  planet, and we dedicated ourselves to development of the solution.
                 </p>
 
-                <img
-                  id="ljubicastaplaneta"
-                  src="img/timelineplanet1.png"
-                  alt=""
+                <img draggable="false" id="ljubicastaplaneta" src="img/timelineplanet1.png" alt=""
                 />
               </div>
             </li>
@@ -162,29 +248,29 @@
                 </h2>
                 <p>
                   For years we have been assembling a team of the most
-                  professional people from all fields who believe in our vision.
+                  professional people from all fields who believe in our vision...
                 </p>
               </div>
             </li>
             <li>
               <div class="content">
                 <h2>
-                  <time>Hard working</time>
+                  <time>Hard work</time>
                 </h2>
                 <p>
-                  We have worked hard for years and developed the best possible
-                  high safety aircraft for our future passengers.
+                  ...and have worked hard for years and developed the best possible
+                  high safety spacecraft for our future passengers...
                 </p>
               </div>
             </li>
             <li>
               <div class="content">
                 <h2>
-                  <time>Bockle up...</time>
+                  <time>Buckle up...</time>
                 </h2>
                 <p>...because Moon, here we come!</p>
 
-                <img id="moon" src="img/timelinemoon.png" alt="" />
+                <img draggable="false" id="moon" src="img/timelinemoon.png" alt="" />
               </div>
             </li>
           </ul>
@@ -192,9 +278,9 @@
       </div>
     </div>
 
-    <!--  TESTIMONIALS DIV 4 -------------------------------------->
+    <!-- DIV 4 - CLIENTS -------------------------------------->
 
-    <div class="container">
+    <div class="container" id="Clients">
       <div class="testi">
         <div class="testiN">
           <h2>Still not reay?</h2>
@@ -203,12 +289,12 @@
             change your mind.
           </p>
         </div>
-        <img id="testplaneta" src="img/testplaneta.png" alt="" />
+        <img draggable="false" id="testplaneta" src="img/testplaneta.png" alt="" />
         <div class="kontejner">
           <input id="rad1" type="radio" name="rad" checked />
 
-          <section>
-            <img src="img/woman1.jpg" alt="" />
+          <section id="sec1">
+            <img draggable="false" src="img/woman1.jpg" alt="" />
             <h1>Megan Brooks</h1>
             <p>
               <i class="fas fa-quote-left"></i>
@@ -230,8 +316,8 @@
 
           <input id="rad2" type="radio" name="rad" />
 
-          <section>
-            <img src="img/men1.jpg" alt="" />
+          <section id="sec2">
+            <img draggable="false" src="img/men1.jpg" alt="" />
             <h1>Leon Gibbs</h1>
             <p>
               <i class="fas fa-quote-left"></i>
@@ -252,8 +338,8 @@
 
           <input id="rad3" type="radio" name="rad" />
 
-          <section>
-            <img src="img/woman2.jpg" alt="" />
+          <section id="sec1">
+            <img draggable="false" src="img/woman2.jpg" alt="" />
             <h1>Alison Cannon</h1>
             <p>
               <i class="fas fa-quote-left"></i>
@@ -274,8 +360,8 @@
 
           <input id="rad4" type="radio" name="rad" />
 
-          <section>
-            <img src="img/men2.jpg" alt="" />
+          <section id="sec2">
+            <img draggable="false" src="img/men2.jpg" alt="" />
             <h1>Shane Taylor</h1>
             <p>
               <i class="fas fa-quote-left"></i>
@@ -297,12 +383,12 @@
       </div>
     </div>
 
-    <!-- DIV 5 PRICE -------------------------------------->
-    <div class="peti">
+    <!-- DIV 5 - PRICE -------------------------------------->
+    <div class="paketi" id="Paketi">
       <div class="container price">
         <div class="card" style="width: 25rem; height: 35rem">
           <div class="card-body">
-            <img id="price2" src="img/standard.png" alt="" />
+            <img draggable="false" id="price2" src="img/standard.png" alt="" />
             <h2>Standard plan</h2>
 
             <hr />
@@ -315,13 +401,13 @@
             <p><i class="fas fa-check"></i> Lorem, ipsum dolor.</p>
             <hr />
 
-            <button>Purchase</button>
+            <button data-toggle="modal" data-target="#modalLoginForm">Purchase</button>
           </div>
         </div>
 
         <div class="card" style="width: 25rem; height: 35rem">
           <div class="card-body">
-            <img id="price2" src="img/planeta.png" alt="" />
+            <img draggable="false" id="price2" src="img/planeta.png" alt="" />
             <h2>Professional plan</h2>
             <hr />
 
@@ -334,13 +420,13 @@
             <p><i class="fas fa-check"></i> Lorem, ipsum dolor.</p>
             <hr />
 
-            <button>Purchase</button>
+            <button data-toggle="modal" data-target="#modalLoginForm">Purchase</button>
           </div>
         </div>
 
         <div class="card" style="width: 25rem; height: 35rem">
           <div class="card-body">
-            <img id="price2" src="img/testplaneta.png" alt="" />
+            <img draggable="false" id="price2" src="img/testplaneta.png" alt="" />
             <h2>Premium plan</h2>
             <hr />
 
@@ -353,14 +439,14 @@
             <p><i class="fas fa-check"></i> Lorem, ipsum dolor.</p>
             <hr />
 
-            <button>Purchase</button>
+            <button data-toggle="modal" data-target="#modalLoginForm">Purchase</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- CONTACT DIV 6-->
-    <div class="kontakt">
+    <!-- DIV 6 - CONTACT -------------------------------------->
+    <div class="kontakt" id="Contact">
       <div class="container">
         <form>
           <div class="form-row">
@@ -426,23 +512,25 @@
           </div>
         </form>
       </div>
+
+      
     </div>
 
-    <!-- FOOTER DIV 7-->
+   <!-- DIV 7 - FOOTER -------------------------------------->
 
     <div class="footer">
       <div class="footerCloud">
-        <img src="img/oblakFooter.png" alt="" />
+        <img draggable="false" src="img/oblakFooter.png" alt="" />
       </div>
 
       <div class="container">
         <div class="row">
-          <div class="col-4 footer1">
-            <img src="img/logo.png" alt="" />
+          <div class="col-xl-4 col-sm-5 footer1">
+            <img draggable="false" src="img/logo.png" alt="" />
             <p>Galactic travel</p>
           </div>
 
-          <div class="col-4 footer2">
+          <div class="col-xl-4 col-sm-5 footer2">
             <a class="nav-link active" href="#Home">Home </a>
             <a class="nav-link active" href="#About">About us </a>
             <a class="nav-link active" href="#">Our pilots </a>
@@ -451,7 +539,7 @@
             <a class="nav-link active" href="#">Contact </a>
           </div>
 
-          <div class="col-4 footer3">
+          <div class="col-xl-4 col-sm-12 footer3">
             <!--Google map-->
             <div
               id="map-container-google-2"
@@ -467,14 +555,14 @@
             </div>
           </div>
 
-          <div class="col-12 media">
+          <div class="col-xl-12 col-sm-12 media">
             <br />
             <hr />
 
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="far fa-envelope"></i>
-            <i class="fab fa-facebook-square"></i>
+            <a href="https://facebook.com/" target="_blank" class="fab fa-facebook-square"></a>
+            <a href="https://instagram.com/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://gmail.com/" target="_blank" class="far fa-envelope"></a>
+            <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
             <hr />
           </div>
         </div>

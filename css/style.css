@@ -18,7 +18,6 @@
   display: flex;
   align-items: center;
 }
-
 .nav_bg img {
   width: 100px;
   height: auto;
@@ -40,12 +39,10 @@
   display: flex;
   align-items: center;
 }
-
 .navbar-brand img {
   height: 60px;
   width: auto;
 }
-
 .navbar-brand span {
   font-size: 20px;
 }
@@ -64,24 +61,14 @@ input[type=radio]:checked + section {
   width: 60%;
   height: 450px;
 }
-
 .kontejner i {
   color: white;
 }
-
 .kontejner section {
   display: none;
   height: 100%;
   color: white;
   text-align: center;
-  background-color: rgba(242, 180, 1, 0.87);
-  backdrop-filter: undefined;
-  -webkit-backdrop-filter: undefined;
-  border: 5px;
-  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
 }
 .kontejner section h1 {
   margin-bottom: 0;
@@ -108,7 +95,28 @@ input[type=radio]:checked + section {
   margin-top: 50px;
   margin-bottom: 25px;
 }
-.kontejner section #rangstar {
+.kontejner #sec1 {
+  background-color: rgba(242, 180, 1, 0.87);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+.kontejner #sec2 {
+  background-color: rgba(30, 3, 83, 0.7);
+  backdrop-filter: undefined;
+  -webkit-backdrop-filter: undefined;
+  border: 5px;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+#rangstar {
   margin-top: 30px;
 }
 
@@ -166,7 +174,7 @@ body {
   color: #f2b401;
 }
 
-/** HOME DIV ******************************/
+/** DIV 1 - HOME ******************************/
 .landing {
   position: relative;
   width: 100%;
@@ -194,21 +202,18 @@ body {
   width: 100%;
   height: 700px;
 }
-
-#cloud1 {
+.clouds #cloud1 {
   width: 100%;
   opacity: 0.05;
 }
-
-#cloud2 {
+.clouds #cloud2 {
   left: 0;
   width: 100%;
   position: absolute;
   opacity: 0.03;
   z-index: 1;
 }
-
-#cloud3 {
+.clouds #cloud3 {
   left: 0;
   bottom: 0;
   width: 100%;
@@ -238,7 +243,7 @@ body {
 }
 .textidug h1 {
   padding-bottom: 5px;
-  color: #1e0353;
+  color: #090328;
   text-decoration: solid;
 }
 .textidug p {
@@ -286,9 +291,32 @@ body {
   background-color: #f2b401;
 }
 
-/** Responsive **/
+/* MODAL */
+.dugmici {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.izlaz {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #f2b401;
+  text-decoration: none;
+  border-style: none;
+}
+
+.izlaz:hover {
+  background: #1e0353;
+  text-decoration: none;
+}
+
 /** ABOUT DIV ******************************/
-#About {
+#OurMission {
   position: relative;
   z-index: 9;
   margin-top: 100px;
@@ -322,7 +350,7 @@ body {
 }
 .morp-f h2 {
   padding: 60px;
-  color: #1e0353;
+  color: #090328;
   text-decoration: solid;
   letter-spacing: 1px;
 }
@@ -338,7 +366,7 @@ body {
   text-align: right;
 }
 
-/** TIME LINE DIV 3 ******************************/
+/** DIV 3 - Our Journey ******************************/
 .Ourjourney {
   margin-top: 100px;
   background-image: url("../img/timelinezvede.png");
@@ -413,7 +441,7 @@ body {
   background: #1e0353;
   position: absolute;
   top: 0px;
-  width: 70px;
+  width: 40px;
   height: 5px;
 }
 .timeline ul li:nth-child(even) .content {
@@ -424,8 +452,8 @@ body {
   border: 5px;
   box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
+  border-radius: 0px 12px 12px 12px;
+  -webkit-border-radius: 0px 12px 12px 12px;
   color: white;
 }
 .timeline ul li:nth-child(even) .content:before {
@@ -439,15 +467,15 @@ body {
   border: 5px;
   box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
+  border-radius: 12px 0px 12px 12px;
+  -webkit-border-radius: 12px 0px 12px 12px;
   color: white;
 }
 .timeline ul li:nth-child(odd) .content:before {
   right: -38px;
 }
 
-/** Testemonials DIV 4  ******************************/
+/** DIV 4 - CLIENTS  ******************************/
 /**** u _slider.scss **/
 .testi {
   margin-top: 100px;
@@ -488,8 +516,8 @@ body {
   z-index: -1;
 }
 
-/** prices DIV ******************************/
-.peti {
+/** DIV 5 - PRICE ******************************/
+.paketi {
   margin-top: 200px;
   background: #1e0353;
   /* fallback for old browsers */
@@ -549,7 +577,7 @@ body {
   left: 33%;
 }
 
-/****** CONTACT DIV 6 **********/
+/** DIV 6 - CONTACT ******************************/
 .kontakt {
   margin-top: 200px;
   font-family: "Rubik", sans-serif !important;
@@ -566,6 +594,11 @@ body {
   border-radius: 12px;
   -webkit-border-radius: 12px;
   color: white;
+}
+
+.modal-content {
+  border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
 }
 
 .message input {
@@ -592,7 +625,7 @@ body {
   text-decoration: none !important;
 }
 
-/** FOOTER **/
+/** DIV 7 - FOOTER ******************************/
 .footer {
   margin-top: 200px;
   width: 100%;
@@ -633,10 +666,14 @@ body {
 .media hr {
   color: #f2b401;
 }
-.media i {
+.media a {
   font-size: 30px;
   padding: 10px;
   color: white;
+  text-decoration: none;
+}
+.media a:hover {
+  color: #f2b401;
 }
 
 .copy {
@@ -660,7 +697,7 @@ body {
   }
 }
 @media only screen and (max-width: 970px) {
-  /* Landing */
+  /* DIV 1 - HOME */
   .clouds {
     margin-bottom: -30%;
   }
@@ -687,8 +724,8 @@ body {
     border: 5px;
     box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
     -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
+    border-radius: 0px 12px 12px 12px;
+    -webkit-border-radius: 0px 12px 12px 12px;
     color: white;
   }
   .timeline ul li:nth-child(odd) .content:before {
@@ -696,7 +733,7 @@ body {
   }
 }
 @media only screen and (max-width: 660px) {
-  /* Landing */
+  /* DIV 1 - HOME */
   .textidug {
     padding-bottom: 20px;
   }
@@ -722,7 +759,7 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
-  /* Landing */
+  /* DIV 1 - HOME */
   #cloud1,
 #cloud2 {
     display: none;
@@ -740,11 +777,25 @@ body {
     width: 80% !important;
   }
 
-  /* our mission */
+  /* DIV 2 - Our Mission */
+  .morp-bg {
+    height: 400px;
+    background-image: none !important;
+  }
+
   .morp-f {
     width: 90%;
     left: 20px;
     top: 10px;
+    background-color: rgba(242, 180, 1, 0.6);
+    backdrop-filter: undefined;
+    -webkit-backdrop-filter: undefined;
+    border: 5px;
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    color: white;
   }
   .morp-f h2 {
     padding: 20px;
@@ -753,12 +804,65 @@ body {
     padding: 20px;
   }
 
-  .morp-bg {
-    background-image: none !important;
+  /* DIV 3 - Our Journey */
+  .timeline ul li .content #ljubicastaplaneta {
+    width: 100px;
+    right: 0;
+  }
+
+  /* DIV 4 - Clients */
+  .kontejner {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .testi {
+    margin-top: 300px;
+  }
+
+  .testiN {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: -170px;
+    z-index: 1;
+    padding: 20px;
+  }
+  .testiN p {
+    padding-top: 20px;
+  }
+
+  #testplaneta {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: -220px;
+    z-index: -1;
+  }
+
+  /* DIV 5 - Price */
+  .card {
+    margin-bottom: 100px;
+  }
+
+  /* DIV 6 - Contact */
+  .kontakt {
+    margin-top: 0px;
+  }
+
+  .form-row {
+    padding: 20px;
+  }
+
+  /* DIV 7 - Footer */
+  .footer {
+    margin-top: 100px;
   }
 }
 @media only screen and (max-width: 380px) {
-  /* Landing */
+  /* DIV 1 - HOME */
   .raketa img {
     margin-right: -30%;
   }
