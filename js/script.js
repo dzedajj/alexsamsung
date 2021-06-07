@@ -22,3 +22,14 @@ $(window).scroll(function() {
 
 
 
+
+if ($(window).width() < 990) {
+ const dugme = document.querySelector('.navbar-toggler');
+  
+  const poz = document.querySelector('.nav_bg');
+    
+  dugme.addEventListener('click' , () => {
+    poz.style.background = "#1e0353";
+  })
+}
+

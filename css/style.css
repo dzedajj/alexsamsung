@@ -169,8 +169,6 @@ body {
 .landing {
   position: relative;
   width: 100%;
-  background: #1e0353;
-  /* fallback for old browsers */
   background-image: linear-gradient(to right top, #680ab6, #44029a, #1e0353, #1e0353);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -229,7 +227,6 @@ body {
   height: 600px;
   z-index: 3;
   padding: 0;
-  margin: 0;
   margin-right: 10%;
 }
 
@@ -242,9 +239,9 @@ body {
   padding-bottom: 5px;
   color: #1e0353;
   text-decoration: solid;
-  letter-spacing: 1px;
 }
 .textidug p {
+  font-size: 1em;
   padding-bottom: 20px;
   color: #1e0353;
 }
@@ -263,62 +260,31 @@ body {
 }
 
 .mainbtn:hover {
-  background: #f2b401;
+  background: #1e0353;
   text-decoration: none;
 }
 
+.toTheTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background-color: #1e0353;
+  z-index: 90;
+}
+.toTheTop i {
+  font-size: 30px;
+  margin-top: 8px;
+  color: white;
+}
+
+.toTheTop:hover {
+  background-color: #f2b401;
+}
+
 /** Responsive **/
-@media only screen and (max-width: 970px) {
-  .clouds {
-    margin-bottom: -30%;
-  }
-
-  #cloud3 {
-    margin-bottom: 30%;
-  }
-}
-@media only screen and (max-width: 660px) {
-  .clouds {
-    margin-bottom: -60%;
-  }
-
-  .textidug h1,
-p {
-    color: white;
-  }
-
-  .planeta {
-    left: -15% !important;
-  }
-
-  #cloud1,
-#cloud2,
-#cloud3 {
-    display: none;
-  }
-
-  #cloudMob {
-    display: block;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .clouds {
-    margin-bottom: -100%;
-  }
-
-  .raketa img {
-    margin-right: -30%;
-  }
-}
-@media only screen and (max-width: 380px) {
-  .clouds {
-    margin-bottom: -130%;
-  }
-
-  .raketa img {
-    margin-right: -30%;
-  }
-}
 /** ABOUT DIV ******************************/
 #About {
   position: relative;
@@ -479,44 +445,6 @@ p {
   right: -38px;
 }
 
-/* -------------------------
-   ----- Media Queries ----- 
-   ------------------------- */
-@media screen and (max-width: 1020px) {
-  .timeline ul li .content {
-    width: 41vw;
-  }
-
-  .timeline ul li:nth-child(odd) .content {
-    left: calc(-41vw - 45px);
-  }
-}
-@media screen and (max-width: 700px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
-  .timeline ul li .content {
-    width: calc(100vw - 100px);
-  }
-  .timeline ul li .content h2 {
-    text-align: initial;
-  }
-  .timeline ul li:nth-child(odd) .content {
-    left: 45px;
-    background-color: rgba(30, 3, 83, 0.8);
-    backdrop-filter: undefined;
-    -webkit-backdrop-filter: undefined;
-    border: 5px;
-    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    color: white;
-  }
-  .timeline ul li:nth-child(odd) .content:before {
-    left: -33px;
-  }
-}
 /** Testemonials DIV 4  ******************************/
 /**** u _slider.scss **/
 .testi {
@@ -594,11 +522,20 @@ p {
 }
 .card-body button {
   margin-top: 20px;
-  background-color: white;
-  height: 50px;
-  width: 100%;
-  border-radius: 20px;
-  color: #1e0353;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  background: #f2b401;
+  padding: 5px 100px 5px 100px;
+  text-decoration: none;
+  border-style: none;
+}
+.card-body button:hover {
+  background: #1e0353;
+  text-decoration: none;
 }
 
 #price2 {
@@ -617,7 +554,7 @@ p {
 
 .form-row {
   padding: 50px;
-  background-color: rgba(242, 180, 1, 0.8);
+  background-color: rgba(30, 3, 83, 0.7);
   backdrop-filter: undefined;
   -webkit-backdrop-filter: undefined;
   border: 5px;
@@ -640,15 +577,15 @@ p {
   font-size: 20px !important;
   font-family: "Rubik", sans-serif !important;
   color: #ffffff !important;
-  background: #1e0353 !important;
+  background: #f2b401 !important;
   padding: 5px 100px 5px 100px !important;
   text-decoration: none !important;
   border-style: none !important;
 }
 
 .btn:hover {
-  background: white !important;
-  color: #1e0353 !important;
+  background: #1e0353 !important;
+  color: white !important;
   text-decoration: none !important;
 }
 
@@ -705,6 +642,130 @@ p {
   background-color: #1e0353;
   color: white;
   text-align: center;
+}
+
+/* ----------------------------------------
+   ---------- Media Queries --------------- 
+   ------------------------------------- */
+@media screen and (max-width: 1020px) {
+  .timeline ul li .content {
+    width: 41vw;
+  }
+
+  .timeline ul li:nth-child(odd) .content {
+    left: calc(-41vw - 45px);
+  }
+}
+@media only screen and (max-width: 970px) {
+  /* Landing */
+  .clouds {
+    margin-bottom: -30%;
+  }
+
+  #cloud3 {
+    margin-bottom: 30%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li .content {
+    width: calc(100vw - 100px);
+  }
+  .timeline ul li .content h2 {
+    text-align: initial;
+  }
+  .timeline ul li:nth-child(odd) .content {
+    left: 45px;
+    background-color: rgba(30, 3, 83, 0.8);
+    backdrop-filter: undefined;
+    -webkit-backdrop-filter: undefined;
+    border: 5px;
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    color: white;
+  }
+  .timeline ul li:nth-child(odd) .content:before {
+    left: -33px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  /* Landing */
+  .textidug {
+    padding-bottom: 20px;
+  }
+  .textidug h1 {
+    color: #f2b401;
+  }
+  .textidug p {
+    color: white;
+  }
+
+  .mainbtn {
+    padding: 5px 60px;
+  }
+
+  .planeta {
+    left: -15% !important;
+  }
+
+  #cloud1,
+#cloud2,
+#cloud3 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* Landing */
+  #cloud1, #cloud2 {
+    display: none;
+  }
+
+  .raketa {
+    align-items: center;
+    padding-top: 200px;
+  }
+  .raketa img {
+    margin-right: -25%;
+  }
+
+  .textidug p {
+    width: 80% !important;
+  }
+
+  /* our mission */
+  .morp-f {
+    width: 90%;
+    left: 20px;
+    top: 10px;
+  }
+  .morp-f h2 {
+    padding: 20px;
+  }
+  .morp-f p {
+    padding: 20px;
+  }
+
+  .morp-bg {
+    background-image: none !important;
+  }
+}
+@media only screen and (max-width: 380px) {
+  /* Landing */
+  .raketa img {
+    margin-right: -30%;
+  }
+
+  .textidug p {
+    width: 80% !important;
+  }
+
+  .mainbtn {
+    padding: 5px 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
