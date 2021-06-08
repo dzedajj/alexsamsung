@@ -6,42 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galactic Travel</title>
 
-    <!-- FAVICON -->
-    
+    <!-- FAVICON -->    
     <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="./img/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
 
     <!-- CDN i linkovanje -->
-
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="node_modules/animate.css/animate.css" />
 
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
-    <!-- endcdn -->
-
+    
     <!-- Font awesome-->
     <script
-      src="https://kit.fontawesome.com/96e1f37749.js"
-      crossorigin="anonymous"
-    ></script>
+    src="https://kit.fontawesome.com/96e1f37749.js"
+    crossorigin="anonymous"
+    ></script>    
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+
+    <!-- endcdn -->
   </head>
 
   <body>
@@ -92,7 +97,7 @@
             is now possible, would you be excited? If the answer is YES, welcome
             aboard!
           </p>
-          <button data-toggle="modal" data-target="#modalLoginForm" class="mainbtn">Apply now</button>
+          <button data-toggle="modal" data-target="#modalLoginForm" class="mainbtn animate__animated animate__backInLeft">Apply now</button>
         </div>
         <img draggable="false"  src="img/rocket.png" alt="" />
       </div>
@@ -295,7 +300,7 @@
 
           <section id="sec1">
             <img draggable="false" src="img/woman1.jpg" alt="" />
-            <h1>Megan Brooks</h1>
+            <h2>Megan Brooks</h2>
             <p>
               <i class="fas fa-quote-left"></i>
               Pellentesque mattis tellus ligula, id scelerisque massa euismod
@@ -318,7 +323,7 @@
 
           <section id="sec2">
             <img draggable="false" src="img/men1.jpg" alt="" />
-            <h1>Leon Gibbs</h1>
+            <h2>Leon Gibbs</h2>
             <p>
               <i class="fas fa-quote-left"></i>
               Pellentesque mattis tellus ligula, id scelerisque massa euismod
@@ -340,7 +345,7 @@
 
           <section id="sec1">
             <img draggable="false" src="img/woman2.jpg" alt="" />
-            <h1>Alison Cannon</h1>
+            <h2>Alison Cannon</h2>
             <p>
               <i class="fas fa-quote-left"></i>
               Pellentesque mattis tellus ligula, id scelerisque massa euismod
@@ -362,7 +367,7 @@
 
           <section id="sec2">
             <img draggable="false" src="img/men2.jpg" alt="" />
-            <h1>Shane Taylor</h1>
+            <h2>Shane Taylor</h2>
             <p>
               <i class="fas fa-quote-left"></i>
               Pellentesque mattis tellus ligula, id scelerisque massa euismod
@@ -525,18 +530,18 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-xl-4 col-sm-5 footer1">
+          <div class="col-xl-4  col-sm-6 col-xs-12 footer1">
             <img draggable="false" src="img/logo.png" alt="" />
             <p>Galactic travel</p>
           </div>
 
-          <div class="col-xl-4 col-sm-5 footer2">
+          <div class="col-xl-4  col-sm-6 col-xs-12 footer2">
             <a class="nav-link active" href="#Home">Home </a>
-            <a class="nav-link active" href="#About">About us </a>
-            <a class="nav-link active" href="#">Our pilots </a>
-            <a class="nav-link active" href="#">Clients </a>
-            <a class="nav-link active" href="#">Pricing </a>
-            <a class="nav-link active" href="#">Contact </a>
+              <a class="nav-link active" href="#OurMission">Our mission</a>
+              <a class="nav-link active" href="#OurJourney">Our journey</a>
+              <a class="nav-link active" href="#Clients">Clients</a>
+              <a class="nav-link active" href="#Paketi">Price</a>
+              <a class="nav-link active" href="#Contact">Contact us</a>
           </div>
 
           <div class="col-xl-4 col-sm-12 footer3">
@@ -555,7 +560,7 @@
             </div>
           </div>
 
-          <div class="col-xl-12 col-sm-12 media">
+          <div class="col-12 media">
             <br />
             <hr />
 
@@ -568,8 +573,8 @@
         </div>
       </div>
 
-      <div class="copy">
-        <h6>Copyright 2021 Galactic travel</h6>
+      <div class="copy d-flex">
+        <h6>Copyright © 2021 Galactic travel</h6>
       </div>
     </div>
 

@@ -70,7 +70,7 @@ input[type=radio]:checked + section {
   color: white;
   text-align: center;
 }
-.kontejner section h1 {
+.kontejner section h2 {
   margin-bottom: 0;
   font-weight: lighter;
   font-size: 2em;
@@ -268,6 +268,9 @@ body {
 .mainbtn:hover {
   background: #1e0353;
   text-decoration: none;
+  transition-timing-function: ease-out;
+  transition: 0.5s;
+  transform: scale(1.05, 1.05);
 }
 
 .toTheTop {
@@ -530,6 +533,11 @@ body {
   justify-content: space-between;
 }
 
+.card {
+  border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
+}
+
 .card-body {
   background-color: rgba(30, 3, 83, 0.7);
   backdrop-filter: undefined;
@@ -567,6 +575,9 @@ body {
 .card-body button:hover {
   background: #1e0353;
   text-decoration: none;
+  transition-timing-function: ease-out;
+  transition: 0.5s;
+  transform: scale(1.05, 1.05);
 }
 
 #price2 {
@@ -623,6 +634,9 @@ body {
   background: #1e0353 !important;
   color: white !important;
   text-decoration: none !important;
+  transition-timing-function: ease-out;
+  transition: 0.5s;
+  transform: scale(1.05, 1.05);
 }
 
 /** DIV 7 - FOOTER ******************************/
@@ -681,7 +695,8 @@ body {
   width: 100%;
   background-color: #1e0353;
   color: white;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ----------------------------------------
@@ -756,6 +771,27 @@ body {
 #cloud2,
 #cloud3 {
     display: none;
+  }
+
+  /* FOOTER */
+  .footer1 {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .footer1 img {
+    width: 100px;
+  }
+
+  .footer2 {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer2 a {
+    padding: 10px;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -859,6 +895,26 @@ body {
   /* DIV 7 - Footer */
   .footer {
     margin-top: 100px;
+  }
+
+  .footer1 {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .footer1 img {
+    width: 100px;
+  }
+
+  .footer2 {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer2 a {
+    padding: 10px;
   }
 }
 @media only screen and (max-width: 380px) {
