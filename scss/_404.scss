@@ -3,9 +3,7 @@
 body{
     padding: 0;
     margin: 0;
-    
-    color: white;
-
+    font-family: 'Rubik', sans-serif !important;
 }
 
 
@@ -19,6 +17,81 @@ html{
         $dark,
         $dark
         );
-    
 }
 
+.greska{
+    background-image: url(../img/zvezda.png);
+   width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    
+    img{
+        height: 400px;
+    }
+}
+
+
+.goBack{
+    h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+    }
+
+    p{
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 18px;
+     text-align: center;
+     margin: 20px;
+     line-height: 30px;
+    }
+
+}
+
+.dugme{
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin-top: 20px;
+       -webkit-border-radius: 10;
+       -moz-border-radius: 10;
+       border-radius: 10px;
+       font-size: 20px;
+       font-family: 'Rubik', sans-serif;
+       color: #ffffff;
+       background: $yellow;
+       padding: 5px 100px 5px 100px;
+       text-decoration: none;
+       border-style: none;
+     }
+   
+     button:hover {
+       background: $dark;
+       text-decoration: none;
+       transition-timing-function: ease-out;
+       transition: .5s;
+       transform: scale(1.05, 1.05);
+     }
+}
+
+
+/*********** MEDIA **************/
+@media screen and (max-width: 700px){
+    .greska{
+      
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

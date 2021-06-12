@@ -22,13 +22,13 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: orange;
+  background: $dark;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: blue;
+  background-color:$dark;
   border-radius: 20px;
-  border: 3px solid orange;
+  border: 3px solid $yellow;
 }
 
 ::selection {
@@ -250,6 +250,12 @@ body {
   }
 }
 
+.morp-f:hover{
+  transition-timing-function: ease-out;
+  transition: .5s;
+  transform: scale(1.01, 1.01);
+}
+
 /** DIV 3 - Our Journey ******************************/
 .Ourjourney {
   margin-top: 100px;
@@ -409,6 +415,11 @@ body {
   }
 }
 
+.testiN:hover{
+  transition-timing-function: ease-out;
+  transition: .5s;
+  transform: scale(1.01, 1.01);
+}
 #testplaneta {
   width: 200px;
   height: 200px;
@@ -417,6 +428,7 @@ body {
   top: -10px;
   z-index: -1;
 }
+
 
 /** DIV 5 - PRICE ******************************/
 
@@ -435,6 +447,12 @@ body {
 .card{
   border-radius: 12px !important;
   -webkit-border-radius: 12px !important;
+}
+
+.card:hover{
+  transition-timing-function: ease-out;
+  transition: .5s;
+  transform: scale(1.05, 1.05);
 }
 .card-body {
   background-color: rgba(30, 3, 83, 0.7);
@@ -542,6 +560,7 @@ body {
   transform: scale(1.05, 1.05);
 }
 
+
 /** DIV 7 - FOOTER ******************************/
 
 .footer {
@@ -575,6 +594,7 @@ body {
 
   a:hover {
     color: $yellow;
+    
   }
 }
 
@@ -605,6 +625,9 @@ body {
 
   a:hover{
     color: $yellow;
+    transition-timing-function: ease-out;
+  transition: .5s;
+  transform: scale(1.1, 1.1);
   }
 }
 
