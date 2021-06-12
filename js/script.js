@@ -1,6 +1,5 @@
 // Dok se scrolluje kroz window (DOM element)
 $(window).scroll(function () {
-
   // Navbar background boja da se pojavljuje
   if ($(document).scrollTop() > 100) {
     $('.nav_bg').addClass('dark');
@@ -16,9 +15,9 @@ $(window).scroll(function () {
   }
 });
 
-// Da kad se klikne hamburger dobije pozadinu
+// Da kad se klikne hamburger dobije pozadinu ljubicastu
 if ($(document).scrollTop() == 0) {
-  $('.navbar-toggler').click( function() {
+  $('.navbar-toggler').click(function () {
     $('.nav_bg').css('background', '#1e0353');
   });
 }
